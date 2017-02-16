@@ -1,6 +1,5 @@
 #Readme ESP8266
-
-The task of the ESP8266 is to communicate to the STM32 via RS232 on the one hand and to communicate to external network devices via WLAN on the other hand. Here is how to use the code shown in this directory.
+This Project is for those who want to speak MQTT with a microcontroller that hasn't WiFi capabilities. You will speak RS232 to an ESP8266 and the ESP will handle all the WiFi and MQTT stuff for you.
 
 ## Compile/Install
 
