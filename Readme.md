@@ -1,5 +1,5 @@
 #Readme ESP8266
-This Project is for those who want to speak MQTT with a microcontroller that hasn't WiFi capabilities. You will speak RS232 to an ESP8266 and the ESP will handle all the WiFi and MQTT stuff for you.
+This Project is for those who want to speak MQTT with a microcontroller that has no WiFi capabilities. You will speak serial to an ESP8266 and the ESP will handle all the WiFi and MQTT stuff for you.
 
 ## Compile/Install
 
