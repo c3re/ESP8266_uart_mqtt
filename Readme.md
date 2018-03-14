@@ -40,7 +40,7 @@ The response should look like this:
 ```
 
 ### Some things to say about the Output
-As you may have seen every line that says nothing about a subscribed topic starts with <DBG>. If a line says something about a  subscribed topic the output follows this syntax:
+As you may have seen every line that says nothing about a subscribed topic starts with `<DBG>`. If a line says something about a  subscribed topic the output follows this syntax:
 `<topic>:<message>\r`
 ### Publish over UART
 Once the ESP is configured you can publish messages over UART using the following input:
