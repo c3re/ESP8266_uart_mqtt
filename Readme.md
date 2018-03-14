@@ -15,13 +15,13 @@ The Task of the ESP is to be an MQTT2UART-Gateway. After you flashed the code yo
 ```
 
 ### How to config
-You can choose any "delimiter"-character which ist not '\r'. Choose one that does not appear within the IP-address, WLAN-passphrase or the topics. The program uses the first character it receives as the delimiter. Put the IP-adress between the first and second occurence of the delimiter, the WLAN-SSID between the second and the third, the password between third and the fourth and after that you can list all topics you want to subscribe to delimited by the delimiter. Do not put the delimiter at the end of the config String. The string has to end with '\r'.
+You can choose any "delimiter"-character which ist not '\r'. Choose one that does not appear within the IP-address, WLAN-passphrase or the topics. The program uses the first character it receives as the delimiter. Put the IP-adress between the first and second occurence of the delimiter, the WLAN-SSID between the second and the third, the password between third and the fourth and after that you can list all topics you want to subscribe to delimited by the delimiter. Do not put the delimiter at the end of the config String. The string has to end with '\r' (carriage return).
 
 **Example**
 
 If you want to attach to an MQTT Server at Port 1883 (this is hardcoded for simplicity) at the IP 10.0.0.1, SSID: klausdieter and password: brunhildebrigitte and you want to subscribe to the topics /lotto /gluecksspirale /bingo you have to use the following configstring
 
-`%10.0.0.1%klausdieter%brunhildebrigitte%/lotto%/gluecksspirale%aktionmensch\n`
+`%10.0.0.1%klausdieter%brunhildebrigitte%/lotto%/gluecksspirale%aktionmensch\r`
 
 The response should look like this:
 
@@ -41,8 +41,8 @@ The response should look like this:
 
 ### Some things to say about the Output
 As you may have seen every line that says nothing about a subscribed topic starts with <DBG>. If a line says something about a  subscribed topic the output follows this syntax:
-`<topic>:<message>\n`
+`<topic>:<message>\r`
 ### Publish over UART
 Once the ESP is configured you can publish messages over UART using the following input:
 
-`<delim><topic><delim><message>\n`
+`<delim><topic><delim><message>\r`
